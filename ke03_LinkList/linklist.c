@@ -103,7 +103,7 @@ bool Delete_ListPos(pLinkList list,int pos)
 void Reverse_List(pLinkList list)
 {
     assert(list != NULL);
-    if(list == NULL)
+    if(list == NULL|| list->_next == NULL)
         return false;
     pLinkList pre = list;
     pLinkList cur = pre->_next;
@@ -122,6 +122,18 @@ void Reverse_List(pLinkList list)
     list->_next = cur;
     return true;
 }
+/*
+void Reverse_List(pLinkList list)
+{
+    pLinkList p = list->_next;
+    pLinkList q ;
+    list->_next = NULL;
+    while(p != NULL)
+    {
+        q = p->_next;
+    }
+}
+*/
 void Clear_List(pLinkList list)
 {
     assert(NULL != list);

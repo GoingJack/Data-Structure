@@ -29,9 +29,13 @@ int main()
     printf("delete pos 4\n");
     Show(head);
     //逆置
-    Reverse_List(head);
+    pLinkList test = (pLinkList)malloc(sizeof(LinkList));
+    Init(test);
+    Insert_ListHead(test,10);
+    Insert_ListHead(test,20);
+    Reverse_List(test);
     printf("reverse list\n");
-    Show(head);
+    Show(test);
     //清空链表
     Clear_List(head);
     Show(head);
